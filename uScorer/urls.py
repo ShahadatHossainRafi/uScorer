@@ -16,11 +16,12 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from uScorer.views import home
-from uScorer.views import about
+from uScorer.views import home, scorer, stats, about
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', home),
-    url(r'^about/$', about),
+    url(r'^scorer$', scorer),
+    url(r'^stats$', about),
+    url(r'^about$', about),
 ]
